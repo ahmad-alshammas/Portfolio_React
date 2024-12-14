@@ -1,4 +1,7 @@
 import CardTestimonial from "./CardTestimonial";
+import mohammdImage from '../assets/images/mohammad.jpg';
+import hamzaImage from '../assets/images/Hamza.jpg';
+import samiImage from '../assets/images/sami.jpg';
 
 function Testimonial(){
     return(
@@ -9,9 +12,9 @@ function Testimonial(){
          <h1 className="text-center">Testimonial</h1>
         <div className="Testimonialbox">
 
-                <CardTestimonial url="/public/images/mohammad.jpg" name="Mohmmad Qadomi" description="Exceptional developer! Delivered high-quality code and was great to work with."/>
-                <CardTestimonial url="/public/images/Hamza.jpg" name="Hamza Zamil" description="Fast, efficient, and knowledgeable. The project came out perfectly"/>
-                <CardTestimonial url="/public/images/sami.jpg" name="Sami Yassen" description="Professional, reliable, and skilled in both front and back end."/>
+                <CardTestimonial url={mohammdImage} name="Mohmmad Qadomi" description="Exceptional developer! Delivered high-quality code and was great to work with."/>
+                <CardTestimonial url={hamzaImage} name="Hamza Zamil" description="Fast, efficient, and knowledgeable. The project came out perfectly"/>
+                <CardTestimonial url={samiImage} name="Sami Yassen" description="Professional, reliable, and skilled in both front and back end."/>
 
          </div>
       </section>

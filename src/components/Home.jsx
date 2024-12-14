@@ -3,7 +3,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'; // import icon Gi
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; // import icon Linkedin 
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; //  import icon Email 
 import useTypingEffect from "../hooks/useTypingEffect"; // استيراد الهوك
-
+import homeImage from "../assets/images/Programmer-bro.svg";
 function Home() {
   const typedName = useTypingEffect("Ahmad Azzam", 150); // النص مع سرعة الكتابة
 
@@ -49,7 +49,7 @@ function Home() {
         </div>
 
         <div className="container-images">
-          <img src="/public/images/Programmer-bro.svg" alt="Programmer" />
+          <img src={homeImage} alt="Programmer" />
         </div>
       </div>
     </section>

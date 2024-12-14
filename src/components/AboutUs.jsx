@@ -1,3 +1,5 @@
+import aboutImage from "../assets/images/Developer activity.svg";
+
 function AboutUs(){
     return(
         <>
@@ -5,7 +7,7 @@ function AboutUs(){
         {/* <!--section two: about us--> */}
         <section className="about" id="page-about">
             <div className="container-image">
-                <img src="images/Developer activity.svg" alt="programer" title="programmer" />
+                <img src={aboutImage} alt="programer" title="programmer" />
             </div>
             {/* <!-- className container-text me because the content the colum flexbox--> */}
             <div className="container-text">

@@ -6,6 +6,7 @@ import {faPhp} from "@fortawesome/free-brands-svg-icons";
 import {faLaravel} from "@fortawesome/free-brands-svg-icons";
 import {faBootstrap} from "@fortawesome/free-brands-svg-icons";
 import {faDatabase} from "@fortawesome/free-solid-svg-icons";
+import skillsImage from "../assets/images/skills.svg";
 
 
 
@@ -31,7 +32,7 @@ function Skills(){
                 </div>
             </div>
             <div className="container-image">
-                <img src="images/skills.svg" alt="skills" title="skills" />
+                <img src={skillsImage} alt="skills" title="skills" />
             </div>
         </section>
     )
