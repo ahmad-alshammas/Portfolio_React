@@ -4,6 +4,9 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; // import icon 
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'; //  import icon Email 
 import useTypingEffect from "../hooks/useTypingEffect"; // استيراد الهوك
 import homeImage from "../assets/images/Programmer-bro.svg";
+import CV from "../assets/Ahmad_AlShammas.pdf";
+
+
 function Home() {
   const typedName = useTypingEffect("Ahmad Azzam", 150); // النص مع سرعة الكتابة
 
@@ -36,7 +39,7 @@ function Home() {
           <h4>Hello, my name is</h4>
           <h1>{typedName}</h1> {/* عرض النص المكتوب تدريجيًا */}
           <h3>I'm a <span>Full-stack</span> Developer</h3>
-          <a href="/public/Ahmad_AlShammas.pdf" target='_blank'>
+          <a href={CV} target='_blank'>
             <button className='button-cv'>Show CV</button>
           </a>
         </div>
