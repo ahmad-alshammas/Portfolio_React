@@ -1,0 +1,764 @@
+
+/*I added variables so I can use them in more than one place.*/
+:root{
+    --primaryColor: #ff274b;
+    --secondarycolor: #f7bcf7;
+    --lightColor: #ffffff;
+    --bgColor-1: #171a1c;
+    --bgColor-2: #22282a;
+    --padding: 8%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bgColor-2);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--bgColor-1);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--primaryColor);
+    transition: 0.6s ease;
+    border-radius: 5px;
+}
+
+html{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 4.65rem; /*Change font-size to h1*/
+    margin: 1.7rem 0; /*make space the top and buttom*/
+    color: var(--lightColor);
+}
+
+h2{
+    color: var(--lightColor);
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+
+h3{
+    font-size: 1.5rem; /*Change font-size to h3*/
+    color: var(--lightColor);
+}
+
+h4{
+    font-size: 1.25rem; /*Change font-size to h4*/
+    letter-spacing: 0.12rem; /*Change letter spacing*/
+    color: var(--secondarycolor);
+}
+
+h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2;
+    color: var(--lightColor);
+}
+span{
+    color: var(--primaryColor);
+}
+
+p{
+    color: var(--secondarycolor);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    text-align: left;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* section one: Home*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+
+}
+
+#logo{
+    border-radius: 25px;
+   
+
+}
+
+/*  start navegation bar ------------------------------------------>  */
+.home nav{
+    padding-top: 2.2rem;
+    padding-left: var(--padding);
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    background-color: var(--bgColor-1);
+    top: 0;
+    z-index: 9090;
+ 
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0.8rem 1rem; 
+}
+
+nav ul li a{
+    color: var(--lightColor);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: var(--primaryColor);
+    transition: 0.4s ease;
+}
+
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+
+/*  end navegation bar ------------------------------------------>  */
+
+/*start content in the home page*/
+.content{
+    flex-grow: 1; /*So that you can take the remaining distance from the width*/
+    padding: var(--padding); /*To take the indentation*/
+    display: flex; /*To make container flexbox*/
+    flex-direction: column; /*To make flexbox to column direction*/
+    justify-content: center; /*To make content in the center the container*/
+    color: var(--lightColor); /*To make color the lightcolor*/
+}
+
+.containter{
+    position: relative; 
+    bottom: 30px; /*Content height above the bottom*/
+}
+
+
+/*-------------------------------------------------------------------*/
+.socialicon{
+    font-size: xx-large;
+    margin-top: 3.5rem;   
+}
+
+.socialicon a {
+    margin : 15px;
+    color: var(--primaryColor);
+}
+
+.socialicon a:hover{
+    color: var(--secondarycolor);
+    transform: scale(1.2);
+    transition: 0.5s ease
+}
+/*-------------------------------------------------------------------*/
+.container-images{
+    display: felx;
+    flex-direction: column;
+    position: relative;
+    /* width: 45%;
+    height: 90%; */
+}
+
+.container-images img{
+
+    position: absolute;
+    top: -25rem;
+    width: 45%;
+    right: 1rem;
+}
+
+
+/*-------------------------------------------------------------------*/
+/*About me:*/
+.about{
+    background-color: var(--bgColor-2);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem var(--padding);
+    text-align: center;
+}
+
+.about .container-image{
+    width: 35%;
+}
+
+.about .container-image img{
+    width: 100%;
+}
+
+.card-icon{
+    color: var(--primaryColor);
+    font-size: xx-large;
+    margin-bottom: 15px;
+}
+
+.container-text{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-cv {
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    padding: 15px;
+    border: none;
+    font-weight: 700;
+    font-size: large;
+    width: 15%;
+    margin-top: 20px;
+    cursor: pointer;   
+}
+
+.button-cv:hover{
+    background-color: var(--secondarycolor);
+    transition: 0.5s ease;
+    color: var(--bgColor-1);
+}
+
+
+/*-------------------------------------------------------------------*/
+/* section Three:*/
+.service , .Testimonial{
+    background-color: var(--bgColor-1);
+    padding: 2rem var(--padding);
+}
+
+.service , .Testimonial .text-center{
+    text-align: center;
+}
+
+/*box:*/
+.box , .Testimonialbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;  
+}
+
+.card , .Testimonialcard{
+    word-wrap: break-word;
+    width: 300px;
+    background-color: var(--bgColor-2);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+    position: relative;
+
+}
+
+.card::after {
+    /* content: "Soon"; */
+    background: var(--primaryColor);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--lightColor);
+    font-size: 30px;
+    text-transform: uppercase;
+    opacity: 100%;
+    border-radius: 20px;
+}
+.card:hover::after{
+    opacity: 0%;
+    transition: 0.5s ease;
+    border: 2px solid var(--secondarycolor);
+}
+
+/*-------------------------------------------------------------------*/
+/* section four:*/
+
+.skills{
+    background-color: var(--bgColor-2);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem var(--padding);
+    text-align: center;
+}
+
+.skills .container-image{
+    width: 35%;
+}
+
+.skills .container-image img{
+    width: 100%;
+}
+
+.container-skills{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-skills{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    color: var(--primaryColor);
+    font-size: 45px; 
+}
+
+.box-html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: 20px;
+}
+
+
+.box-css{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: 20px;
+}
+
+.box-html:hover,.box-css:hover {
+    background-color: var(--primaryColor);
+    transition: 1s ease;
+}
+
+/*---------------------------------------------------------------------------*/
+/*section five*/
+/*Testemonial*/
+.Testimonialcard:hover{
+
+    border: 3px solid var(--secondarycolor);
+    transition: 0.5s ease;
+}
+.Testimonial img{
+    Object-fit:cover;
+    border-radius: 50%;
+    border: 2px solid var(--secondarycolor);
+}
+/*---------------------------------------------------------------------------*/
+/*section sex*/
+/*Project*/
+#padd{
+    padding: 10px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*section seven*/
+/*Highlight*/
+.Highlight{
+    background-color: var(--bgColor-1);
+    padding: 2rem var(--padding);
+    display: flex;
+    flex-direction: column;
+}
+
+.Highlightbox{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+
+}
+
+.Highlightcard{
+    padding: 1rem 2rem;
+    background-color: var(--bgColor-2);
+    border: 2px solid var(--secondarycolor);
+}
+
+.Highlight .text-center{
+    text-align: center;
+}
+
+.Highlightcard h3{
+    font-size: 1.2rem;
+}
+
+.Highlightcard:hover{
+    background-color: var(--primaryColor);
+    /* border: 2px solid var(--secondarycolor); */
+    transition: 0.3s ease;
+}
+
+/*---------------------------------------------------------------------------*/
+/*section eight*/
+/*Footer*/
+
+footer{
+    padding: 2rem var(--padding);
+    background-color: var(--bgColor-2);
+}
+
+.footersection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form div{
+    padding: 1rem;
+    margin: 1rem;
+    color: var(--lightColor);
+}
+
+legend{
+    font-size: larger;
+    color: var(--primaryColor);
+}
+
+.feild{
+    display: felx;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.textarea-padding{
+    padding-left: 4rem;
+}
+
+
+.footercontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit{
+    padding: 1rem;
+    color: var(--lightColor);
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.btn-submit:hover{
+    background-color: var(--lightColor);
+    color: var(--primaryColor);
+    transition: 0.4s ease;
+}
+
+form input{
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+fieldset:hover{
+    background-color: var(--bgColor-1);
+    transition: 0.6s ease;
+   
+}
+
+.button-project {
+   
+    background-color: #ff274b;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-project a {
+    text-decoration: none;
+    color: var(--lightColor);
+}
+
+.button-project:hover {
+    background-color: var(--secondarycolor);
+    transition: 0.6s ease;
+
+}
+
+.button-project:hover a {
+    color: var(--bgColor-1);
+    transition: 0.6s ease;
+}
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 575px) {
+    :root {
+        --padding:1.5rem;
+
+    }
+
+    html{
+        font-size: 13px;
+    }
+
+    .container-images img {
+        display: none;
+    }
+
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgColor-2);
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 30px;
+        padding: 10px;
+
+    }
+
+    .containter {
+        bottom: 30px;
+    }
+
+    .socialicon{
+        margin-top: 70px;
+    }
+
+    #menu{
+        display: block;
+    }
+
+  
+}
+
+
+
+
+     /* General mobile adjustments */
+@media (max-width: 768px) {
+
+
+    /*----------------------------------------------*/
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+
+
+    /* Adjust the padding */
+    :root {
+        --padding: 4%;
+    }
+
+
+
+    nav ul li {
+        margin: 0.5rem 0.7rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    /* Make the home section content stack vertically */
+    .content {
+        align-items: center;
+    }
+
+    .container-images img {
+        position: relative;
+        top: 0;
+        width: 70%;
+        right: 0;
+        margin-top: 2rem;
+    }
+
+    .about, .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .container-image,
+    .skills .container-image,
+    .container-text,
+    .container-skills {
+        width: 90%;
+    }
+
+    /* Center align testimonial cards for small screens */
+    .Testimonialbox,
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .Testimonialcard {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    /* Project section adjustments */
+    .box-skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-html, .box-css {
+        width: 80%;
+    }
+
+    /* Footer responsiveness */
+    .footersection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formcontactus {
+        width: 100%;
+    }
+
+    .textarea-padding {
+        padding-left: 1rem;
+    }
+
+    .btn-submit {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .box , .Testimonialbox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-between;
+        gap: 1rem;  
+    }
+}
+
+/* Smaller mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0.5rem;
+    }
+
+    .container-images img {
+        width: 80%;
+    }
+
+    .box-html, .box-css, .card, .Testimonialcard {
+        width: 90%;
+    }
+
+    /* Footer form adjustments */
+    .btn-submit {
+        width: 90%;
+    }
+
+    .box , .Testimonialbox{
+        display: flex;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-between;
+        gap: 1rem;  
+    }
+
+    .button-cv {
+        background-color: var(--primaryColor);
+        color: var(--lightColor);
+        padding: 15px;
+        border: none;
+        font-weight: 700;
+        font-size: large;
+        width: 50%;
+        margin-top: 20px;
+        cursor: pointer;   
+    }
+}
+
+
